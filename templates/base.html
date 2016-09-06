@@ -29,7 +29,26 @@
 <body>
 <!-- NAVBAR
 ================================================== -->
+<div class="bar-idioma"></div>
 <div class="navbar-wrapper">
+  <div class="bar-idioma">
+    <!--<ul class="idioma">
+      <li>Idioma:</li>
+
+      <li><a href="">Ingles <img src="/static/images/eeuu.jpg" alt=""></a></li>
+    </ul>-->
+    <div class="dropdown">
+      <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Seleccionar Idioma
+        <span class="caret"></span>
+      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#"><img src="/static/images/eeuu.jpg" alt="ingles"> Ingles</a></li>
+        <li><a href="#"><img src="/static/images/spanish.jpg" alt="espanol"> Español</a></li>
+        
+      </ul>
+    </div>
+  </div>
   <div class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -38,7 +57,13 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#about">INTRODUCCIÓN</a></li>
-          <li><a href="#team">CONTRIBUYENTES</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COLABORAR<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">SOLICITAR DATOS</a></li>
+              <li><a href="#">SOLICITAR USUARIO</a></li>
+            </ul>
+          </li>
           <li><a href="#afiliase">AFILIARSE</a></li>
           <li><a href="#contact">SOLICITAR DATOS</a></li>
           <li><a href="#metodologia">METODOLOGÍA</a></li>
@@ -65,7 +90,7 @@
         <div class="qborder"></div>
       </div>
     </div>
-    <p>© 2016 Bioversity Internacional, Todos los derechos reservados. Desarrollado por <span style="color:green;">SIMAS</span> </p>
+    <p>© 2016 Bioversity Internacional, Todos los derechos reservados. Desarrollado por <span style="color:green;">SIMAS</span> El ingreso y actualización de la información es responsabilidad de Bioversity, así como el contenido de la misma.</p>
 
   </div>
 </div>
@@ -80,6 +105,10 @@
 <script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="/static/js/jquery.circliful.js"></script>
 <script type="text/javascript" src="/static/js/docs.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
 <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="/static/js/table.exporting.js"></script>
 {% block extra_js %}{% endblock %}
